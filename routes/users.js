@@ -40,7 +40,7 @@ router.post(
     failureRedirect: "/login",
   }),
   (req, res) => {
-    req.flash("Welcome back");
+    req.flash("success", "Welcome back");
     const redirectUrl = res.locals.returnTo || "/campgrounds";
     delete req.session.returnTo;
     res.redirect(redirectUrl);
