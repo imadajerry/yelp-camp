@@ -1,7 +1,13 @@
 <% layout('layout/boilerplate') %>
 <h1 class="text-center">Edit Campground</h1>
 <div class="col-6 offset-3">
-    <form action="/campgrounds/<%= campground.id %>?_method=PUT" method="post" novalidate class="validated-form">
+  <form
+    action="/campgrounds/<%= campground.id %>?_method=PUT"
+    method="post"
+    novalidate
+    class="validated-form"
+    enctype="multipart/form-data"
+  >
         <div class="mb-3">
             <label for="title" class="form-label">Title: </label>
             <input type="text" class="form-control" name="campground[title]" id="title" placeholder="Title" value="<%= campground.title %>" required>
