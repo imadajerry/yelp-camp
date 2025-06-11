@@ -12,6 +12,8 @@ const ExpressError = require("./utils/ExpressError");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
+const cloudinary = require("cloudinary").v2;
+
 const User = require("./models/user");
 
 const userRoutes = require("./routes/users");
