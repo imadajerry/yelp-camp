@@ -7,8 +7,8 @@
     class="validated-form"
     enctype="multipart/form-data"
   >
-        <div class="mb-3">
-            <label for="title" class="form-label">Title: </label>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title: </label>
       <input
         type="text"
         class="form-control"
@@ -17,23 +17,23 @@
         placeholder="Title"
         required
       />
-            <div class="valid-feedback">Looks good!</div>
-        </div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
     <div class="mb-3">
       <label for="image" class="form-label"
         >Choose images: </label
       >
       <input class="form-control" type="file" name="image" id="image" multiple />
     </div>
-        <!-- <div class="mb-3">
+    <!-- <div class="mb-3">
             <label for="image" class="form-label">Image URL: </label>
             <input type="text" class="form-control" name="campground[image]" id="image" placeholder="image" required>
             <div class="valid-feedback">Looks good!</div>
         </div> -->
-        <div class="mb-3">
-            <label for="price" class="form-label">Campground Price: </label>
-            <div class="input-group">
-                <span class="input-group-text" id="price-label">$</span>
+    <div class="mb-3">
+      <label for="price" class="form-label">Campground Price: </label>
+      <div class="input-group">
+        <span class="input-group-text" id="price-label">$</span>
         <input
           type="text"
           class="form-control"
@@ -44,11 +44,11 @@
           aria-describedby="price-label"
           required
         />
-                <div class="valid-feedback">Looks good!</div>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description: </label>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description: </label>
       <textarea
         class="form-control"
         name="campground[description]"
@@ -56,10 +56,10 @@
         placeholder="description"
         required
       ></textarea>
-            <div class="valid-feedback">Looks good!</div>
-        </div>
-        <div class="mb-3">
-            <label for="location" class="form-label">Location: </label>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Location: </label>
       <input
         type="text"
         class="form-control"
@@ -68,11 +68,11 @@
         placeholder="Location"
         required
       />
-            <div class="valid-feedback">Looks good!</div>
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-success">Add Campground</button>
-        </div>
-    </form>
-    <a href="/campgrounds">All Campgrounds</a>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-success">Add Campground</button>
+    </div>
+  </form>
+  <a href="/campgrounds">All Campgrounds</a>
 </div>
