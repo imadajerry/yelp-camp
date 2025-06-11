@@ -8,8 +8,8 @@
     class="validated-form"
     enctype="multipart/form-data"
   >
-        <div class="mb-3">
-            <label for="title" class="form-label">Title: </label>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title: </label>
       <input
         type="text"
         class="form-control"
@@ -19,8 +19,8 @@
         value="<%= campground.title %>"
         required
       />
-        </div>
-        <div class="mb-3">
+    </div>
+    <div class="mb-3">
       <label for="image" class="form-label">Add more image(s): </label>
       <input
         class="form-control"
@@ -29,11 +29,11 @@
         id="image"
         multiple
       />
-        </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Campground Price: </label>
-            <div class="input-group">
-                <span class="input-group-text" id="price-label">$</span>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Campground Price: </label>
+      <div class="input-group">
+        <span class="input-group-text" id="price-label">$</span>
         <input
           type="text"
           class="form-control"
@@ -45,10 +45,10 @@
           aria-describedby="price-label"
           required
         />
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description: </label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description: </label>
       <textarea
         class="form-control"
         name="campground[description]"
@@ -58,9 +58,9 @@
       >
                 <%= campground.description %>
             </textarea>
-        </div>
-        <div class="mb-3">
-            <label for="location" class="form-label">Location: </label>
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Location: </label>
       <input
         type="text"
         class="form-control"
@@ -70,10 +70,10 @@
         value="<%= campground.location %>"
         required
       />
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-info text-light">Update Campground</button>
-        </div>
-    </form>
-    <a href="/campgrounds/<%= campground._id %>">Back to Campground</a>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-info text-light">Update Campground</button>
+    </div>
+  </form>
+  <a href="/campgrounds/<%= campground._id %>">Back to Campground</a>
 </div>
