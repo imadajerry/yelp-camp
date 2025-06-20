@@ -5,6 +5,10 @@ const map = new maptilersdk.Map({
   style: maptilersdk.MapStyle.BRIGHT,
   center: [-103.59179687498357, 40.66995747013945],
   zoom: 3,
+  terrainControl: true,
+  scaleControl: true,
+  fullscreenControl: "top-left",
+  geolocateControl: false,  
 });
 
 map.on("load", function () {
