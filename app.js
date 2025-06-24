@@ -13,6 +13,7 @@ const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const cloudinary = require("cloudinary").v2;
+const sanitizeV5 = require('./utils/mongoSanitizeV5.js');
 
 const User = require("./models/user");
 
@@ -34,10 +35,12 @@ const app = express();
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set('query parser', 'extended');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(sanitizeV5({ replaceWith: '_' }));
 
 const sessionConfig = {
   secret: "thisshouldbeabettersecret",
@@ -60,7 +63,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-  console.log(req.session);
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
