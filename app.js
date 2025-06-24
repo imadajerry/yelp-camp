@@ -13,8 +13,8 @@ const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const cloudinary = require("cloudinary").v2;
-const sanitizeV5 = require('./utils/mongoSanitizeV5.js');
 
+const sanitizeV5 = require("./utils/mongoSanitizeV5.js");
 const User = require("./models/user");
 
 const userRoutes = require("./routes/users");
@@ -35,15 +35,15 @@ const app = express();
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.set('query parser', 'extended');
+app.set("query parser", "extended");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(sanitizeV5({ replaceWith: '_' }));
+app.use(sanitizeV5({ replaceWith: "_" }));
 
 const sessionConfig = {
-  name: "session"
+  name: "session",
   secret: "thisshouldbeabettersecret",
   resave: false,
   saveUninitialized: true,
